@@ -4,27 +4,30 @@ import {Tabs, Input, Button} from 'antd';
 import * as H from '../helpers';
 import './InputClues.less';
 
-const InputClues = ({values, clues, onEdit}) => {
+const InputClues = ({values, clues, onSelectEdit, onUpdate}) => {
     let config = [
         {title: 'Across', clues: clues.filter(x => x.isAcross)},
         {title: 'Down', clues: clues.filter(x => !x.isAcross)}
     ];
 
-    console.log('clues[0]', clues[0]);
-
     let panes = config.map(ea => {
         let clueComponents = ea.clues.map(clue => {
-            let answer = H.getDisplayValue(values, clue);
-            let clueDisplayLength = H.punctuationArrToDisplay(clue.punctuation);
+            let answer = H.getAnswerDisplay(values, clue);
+            let clueDisplayLength = H.punctuation.arrToDisplay(clue.punctuation);
             return (
                 <div key={clue.number} className="input-clue">
                     <div className="flex">
                         <div className="number">{clue.number}</div>
                         <div className="answer">{answer}</div>
                         <div className="length">({clueDisplayLength})</div>
-                        <Button onClick={() => onEdit(clue)} className="button" icon="edit" />
+                        <Button onClick={() => onSelectEdit(clue)} className="button" icon="edit" />
                     </div>
-                    <Input.TextArea rows={2} className="clue" />
+                    <Input.TextArea
+                        value={clue.question}
+                        onChange={e => onUpdate({clue, question: e.target.value})}
+                        rows={2}
+                        className="clue"
+                    />
                 </div>
             );
         });
@@ -41,7 +44,8 @@ const InputClues = ({values, clues, onEdit}) => {
 
 InputClues.propTypes = {
     clues: PropTypes.arrayOf(PropTypes.object).isRequired,
-    onEdit: PropTypes.func.isRequired,
+    onSelectEdit: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func.isRequired,
     values: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired
 };
 

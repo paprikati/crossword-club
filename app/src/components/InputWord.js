@@ -5,19 +5,19 @@ import './InputWord.less';
 
 // _ is a space, - is a dash.
 
-const InputWord = ({value, punctuation, onChange}) => {
+const InputWord = ({answer, punctuation, onChange}) => {
     const refs = [];
 
     function changeChar(char, charIndex) {
-        let newValue = [...value];
+        let newValue = [...answer];
         newValue[charIndex] = char.slice(-1).toUpperCase();
-        if (charIndex + 1 < value.length) {
+        if (charIndex + 1 < answer.length) {
             refs[charIndex + 1].current.focus();
         }
         onChange(newValue);
     }
 
-    let inputs = value.map((char, charIndex) => {
+    let inputs = answer.map((char, charIndex) => {
         refs[charIndex] = useRef();
         let punctuationDisplay;
         if (punctuation[charIndex]) {
@@ -42,9 +42,9 @@ const InputWord = ({value, punctuation, onChange}) => {
 };
 
 InputWord.propTypes = {
+    answer: PropTypes.arrayOf(PropTypes.string).isRequired,
     onChange: PropTypes.func.isRequired,
-    punctuation: PropTypes.arrayOf(PropTypes.oneOf(['_', '-', ''])).isRequired,
-    value: PropTypes.arrayOf(PropTypes.string).isRequired
+    punctuation: PropTypes.arrayOf(PropTypes.oneOf(['_', '-', ''])).isRequired
 };
 
 export default InputWord;

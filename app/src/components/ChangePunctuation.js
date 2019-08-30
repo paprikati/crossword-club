@@ -7,12 +7,12 @@ import './ChangePunctuation.less';
 // _ is a space, - is a dash.
 
 const ChangePunctuation = ({punctuation, changePunctuation}) => {
-    let displayVal = H.punctuationArrToDisplay(punctuation);
+    let displayVal = H.punctuation.arrToDisplay(punctuation);
 
     function onBlur(e) {
         let val = e.target.value;
         try {
-            let arr = H.punctuationDisplayToArr(val);
+            let arr = H.punctuation.displayToArr(val);
             if (arr.length !== punctuation.length) {
                 throw 'wrong length';
             }

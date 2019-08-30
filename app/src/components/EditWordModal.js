@@ -6,13 +6,13 @@ import InputWord from './InputWord';
 import ChangePunctuation from './ChangePunctuation';
 
 const EditWordModal = ({clue, values, onCancel, onOk}) => {
-    let currentVal = H.getClueValue(values, clue);
-    let [value, updateValue] = useState(currentVal);
+    let currentVal = H.getClueAnswer(values, clue);
+    let [answer, updateAnswer] = useState(currentVal);
     let [punctuation, updatePunctuation] = useState(clue.punctuation);
 
     return (
-        <Modal visible onCancel={onCancel} onOk={() => onOk({value, punctuation})}>
-            <InputWord value={value} onChange={updateValue} punctuation={punctuation} />
+        <Modal visible onCancel={onCancel} onOk={() => onOk({answer, punctuation})}>
+            <InputWord answer={answer} onChange={updateAnswer} punctuation={punctuation} />
             <ChangePunctuation punctuation={punctuation} changePunctuation={updatePunctuation} />
         </Modal>
     );

@@ -22,20 +22,16 @@ class Edit extends Component {
     onUpdate(action, info) {
         switch (action) {
             case 'editWord':
-                let {value, punctuation} = info;
+                let {answer, punctuation} = info;
 
                 this.setState(currentState => {
                     let newClues = currentState.clues;
                     let clueToChange = this.state.editWord;
-                    let clueIndex = newClues.findIndex(
-                        x => x.number === clueToChange.number && x.isAcross === clueToChange.isAcross
-                    );
-                    newClues[clueIndex].punctuation = punctuation;
-                    console.log('newClues', newClues);
-                    console.log('currentState', currentState);
-                    console.log('punctuation', punctuation);
+                    let clueIndex = H.getClueIndex(newClues, clueToChange);
 
-                    let newValues = H.updateValues(currentState.values, clueToChange, value);
+                    newClues[clueIndex].punctuation = punctuation;
+
+                    let newValues = H.updateValues(currentState.values, clueToChange, answer);
 
                     return {
                         clues: newClues,
@@ -43,9 +39,18 @@ class Edit extends Component {
                         editWord: false
                     };
                 });
+                break;
+            case 'editQuestion':
+                let {clue, question} = info;
 
-                // find the clue and edit it
-                console.log(this.state.clues);
+                this.setState(currentState => {
+                    let newClues = currentState.clues;
+                    let clueIndex = H.getClueIndex(newClues, clue);
+
+                    newClues[clueIndex].question = question;
+                    return {clues: newClues};
+                });
+
                 break;
             default:
                 console.log(action);
@@ -86,7 +91,12 @@ class Edit extends Component {
                         />
                         <Button size="large">SAVE CHANGES</Button>
                     </div>
-                    <InputClues values={this.state.values} clues={this.state.clues} onEdit={this.editWord} />
+                    <InputClues
+                        values={this.state.values}
+                        clues={this.state.clues}
+                        onSelectEdit={this.editWord}
+                        onUpdate={info => this.onUpdate('editQuestion', info)}
+                    />
                 </div>
             </div>
         );

@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const common = require('./webpack.common.js.js');
+const common = require('./webpack.common.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
 const ModuleDependencyWarning = require('webpack/lib/ModuleDependencyWarning');
