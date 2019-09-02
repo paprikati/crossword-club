@@ -11,7 +11,7 @@ const EditWordModal = ({clue, values, onCancel, onOk}) => {
     let [punctuation, updatePunctuation] = useState(clue.punctuation);
 
     return (
-        <Modal visible onCancel={onCancel} onOk={() => onOk({answer, punctuation})}>
+        <Modal width={700} visible onCancel={onCancel} onOk={() => onOk({answer, punctuation})}>
             <InputWord answer={answer} onChange={updateAnswer} punctuation={punctuation} />
             <ChangePunctuation punctuation={punctuation} changePunctuation={updatePunctuation} />
         </Modal>

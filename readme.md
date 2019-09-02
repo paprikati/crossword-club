@@ -28,8 +28,9 @@ represents what letters are where in a grid. Note that black squares will just b
 
 represents an answer to a single clue. It will never contain punctuation
 
+```js
 ['D','O','G']
-
+```
 ## Clue
 
 represents a clue. `clues` is an array of these objects.

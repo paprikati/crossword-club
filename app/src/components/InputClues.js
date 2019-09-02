@@ -23,9 +23,9 @@ const InputClues = ({values, clues, onSelectEdit, onUpdate}) => {
                         <Button onClick={() => onSelectEdit(clue)} className="button" icon="edit" />
                     </div>
                     <Input.TextArea
+                        style={{height: '40px', fontSize: '12px'}}
                         value={clue.question}
                         onChange={e => onUpdate({clue, question: e.target.value})}
-                        rows={2}
                         className="clue"
                     />
                 </div>
@@ -39,7 +39,12 @@ const InputClues = ({values, clues, onSelectEdit, onUpdate}) => {
         );
     });
 
-    return <Tabs className="input-clues">{panes}</Tabs>;
+    return (
+        <div style={{width: '60%'}}>
+            <div className="input-clues-header">Clues</div>
+            <Tabs className="input-clues">{panes}</Tabs>
+        </div>
+    );
 };
 
 InputClues.propTypes = {

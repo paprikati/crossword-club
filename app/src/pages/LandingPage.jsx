@@ -1,26 +1,29 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'antd';
+import './LandingPage.less';
 
-const LandingPage = ({user, onAction}) => {
+const LandingPage = ({onChangePage}) => {
     return (
-        <Fragment>
-            <Button onClick={() => onAction('view')} icon="eye">
+        <div className="landing-page-buttons">
+            <Button type="primary" onClick={() => onChangePage('viewList')} icon="eye">
                 View Crosswords
             </Button>
-            <Button onClick={() => onAction('create')} icon="plus">
+            <Button type="primary" onClick={() => onChangePage('create')} icon="plus">
                 Create Crossword
             </Button>
-            <Button onClick={() => onAction('edit')} icon="edit">
+            <Button type="primary" onClick={() => onChangePage('editList')} icon="edit">
                 Edit Crossword
             </Button>
-        </Fragment>
+            <Button type="primary" onClick={() => onChangePage('addGrid')} icon="table">
+                Add New Grid
+            </Button>
+        </div>
     );
 };
 
 LandingPage.propTypes = {
-    onAction: PropTypes.func.isRequired,
-    user: PropTypes.object.isRequired
+    onChangePage: PropTypes.func.isRequired
 };
 
 export default LandingPage;

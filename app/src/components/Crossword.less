@@ -35,6 +35,12 @@
     }
 }
 
+.crossword.big {
+    .cell-content.has-number:hover {
+        cursor: pointer;
+    }
+}
+
 .crossword.small {
     .crossword-cell {
         height: 25px;
@@ -48,6 +54,21 @@
         .cell-content {
             font-size: 12px;
             padding-top: 3px;
+        }
+    }
+}
+
+.crossword.micro {
+    .crossword-cell {
+        height: 5px;
+        width: 5px;
+
+        .cell-number {
+            display: none;
+        }
+
+        .cell-content {
+            display: none;
         }
     }
 }
