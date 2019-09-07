@@ -44,3 +44,9 @@ var clue = {
     punctuation:['','','-','',''] // can contain dashes or underscores for spaces
 };
 ```
+
+
+TODO:
+1. suggestions for words when creating a crossword using word list
+2. support for delete / left arrow in InputWord component
+3. other punctuation (e.g. apostrophes)

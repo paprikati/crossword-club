@@ -63,8 +63,63 @@ function convertBinaryToStored(binarygrid) {
     return ret;
 }
 
+function getBase(width, styleLetter) {
+    // TRUE = even, FALSE = odd
+    const styleLookup = {
+        A: {
+            rows: false,
+            blacks: false
+        },
+        B: {
+            rows: true,
+            blacks: true
+        },
+        C: {
+            rows: false,
+            blacks: true
+        },
+        D: {
+            rows: true,
+            blacks: false
+        }
+    };
+
+    let style = styleLookup[styleLetter];
+
+    let grid = [];
+
+    for (let x = 0; x < width; x++) {
+        let row = [];
+        let rowIsImpacted = isEven(x) === style.rows;
+
+        for (let y = 0; y < width; y++) {
+            // work out if this cell is impacted
+            row.push(rowIsImpacted && isEven(y) === style.blacks ? 0 : 1);
+        }
+        grid.push(row);
+    }
+    return grid;
+}
+
+const isEven = num => num % 2 === 0;
+
+function getRandom(allGrids) {
+    function randomIntFromInterval(min, max) {
+        let rand = Math.random();
+        let multiplier = max - min + 1;
+        let randTimesMultiplier = rand * multiplier;
+        // min and max included
+        return Math.floor(randTimesMultiplier + min);
+    }
+    let thisGrid = allGrids[randomIntFromInterval(0, allGrids.length - 1)].grid;
+
+    return getBinaryGrid(thisGrid);
+}
+
 export default {
     getBinaryGrid,
     completeBinaryGrid,
-    convertBinaryToStored
+    convertBinaryToStored,
+    getBase,
+    getRandom
 };

@@ -12,8 +12,8 @@ const EditWordModal = ({clue, values, onCancel, onOk}) => {
 
     return (
         <Modal width={700} visible onCancel={onCancel} onOk={() => onOk({answer, punctuation})}>
-            <InputWord answer={answer} onChange={updateAnswer} punctuation={punctuation} />
             <ChangePunctuation punctuation={punctuation} changePunctuation={updatePunctuation} />
+            <InputWord answer={answer} onChange={updateAnswer} punctuation={punctuation} showPossibleWords />
         </Modal>
     );
 };

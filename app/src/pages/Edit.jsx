@@ -208,7 +208,7 @@ class Edit extends Component {
 }
 
 function getEmptyCrossword(grids) {
-    let binarygrid = H.getRandomGrid(grids);
+    let binarygrid = H.grids.getRandom(grids);
     return {
         binarygrid,
         values: H.getEmptyValues(binarygrid.length),

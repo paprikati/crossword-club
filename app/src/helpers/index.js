@@ -1,10 +1,10 @@
 import React from 'react';
-import grids from './grids';
 import punctuation from './punctuation';
 
-export {default as punctuation} from './punctuation';
 export {default as clues} from './clues';
 export {default as grids} from './grids';
+export {default as punctuation} from './punctuation';
+export {default as words} from './words';
 
 export function getEmptyValues(gridLength) {
     let row = new Array(gridLength);
@@ -81,19 +81,6 @@ export function getClueIndex(clues, clue) {
     return clues.findIndex(x => x.number === clue.number && x.isAcross === clue.isAcross);
 }
 
-export function getRandomGrid(allGrids) {
-    function randomIntFromInterval(min, max) {
-        let rand = Math.random();
-        let multiplier = max - min + 1;
-        let randTimesMultiplier = rand * multiplier;
-        // min and max included
-        return Math.floor(randTimesMultiplier + min);
-    }
-    let thisGrid = allGrids[randomIntFromInterval(0, allGrids.length - 1)].grid;
-
-    return grids.getBinaryGrid(thisGrid);
-}
-
 export function getClueDisplay(clue) {
     let clueDisplayLength = punctuation.arrToDisplay(clue.punctuation);
     return (
@@ -102,43 +89,3 @@ export function getClueDisplay(clue) {
         </div>
     );
 }
-
-export function getBaseGrid(width, styleLetter) {
-    // TRUE = even, FALSE = odd
-    const styleLookup = {
-        A: {
-            rows: false,
-            blacks: false
-        },
-        B: {
-            rows: true,
-            blacks: true
-        },
-        C: {
-            rows: false,
-            blacks: true
-        },
-        D: {
-            rows: true,
-            blacks: false
-        }
-    };
-
-    let style = styleLookup[styleLetter];
-
-    let grid = [];
-
-    for (let x = 0; x < width; x++) {
-        let row = [];
-        let rowIsImpacted = isEven(x) === style.rows;
-
-        for (let y = 0; y < width; y++) {
-            // work out if this cell is impacted
-            row.push(rowIsImpacted && isEven(y) === style.blacks ? 0 : 1);
-        }
-        grid.push(row);
-    }
-    return grid;
-}
-
-const isEven = num => num % 2 === 0;

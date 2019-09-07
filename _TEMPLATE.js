@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// holds all the methods for complex updating of the store
 class Something extends Component {
     constructor(props) {
         super(props);

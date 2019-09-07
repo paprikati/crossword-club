@@ -10,7 +10,7 @@ const AddGrid = ({_fetch, onChangePage}) => {
     let [step, changeStep] = useState(0);
     let [gridStyle, updateGridStyle] = useState('A');
     let [gridWidth, updateGridWidth] = useState(15);
-    let [binarygrid, updateBinaryGrid] = useState(H.getBaseGrid(15, 'A'));
+    let [binarygrid, updateBinaryGrid] = useState(H.grids.getBase(15, 'A'));
     let [symmetricalMode, updateSymmetricalMode] = useState(true);
 
     function changeWidth(newWidth) {
@@ -24,7 +24,7 @@ const AddGrid = ({_fetch, onChangePage}) => {
     }
 
     function changeBaseGrid(width, style) {
-        updateBinaryGrid(H.getBaseGrid(width, style));
+        updateBinaryGrid(H.grids.getBase(width, style));
     }
 
     let gridStyleOptions = ['A', 'B', 'C', 'D'].map(x => ({value: x, label: `Style ${x}`}));
