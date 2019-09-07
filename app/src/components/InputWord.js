@@ -80,6 +80,7 @@ class InputWord extends Component {
                     <Input
                         ref={charIndex === currentChar ? this.currentCharInputRef : null}
                         onChange={e => this.updateWord(e.target.value, charIndex)}
+                        onClick={() => this.updateCurrentChar(charIndex)}
                         key={charIndex}
                         className="char-input"
                         value={char}
