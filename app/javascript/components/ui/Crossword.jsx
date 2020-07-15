@@ -1,14 +1,15 @@
 import React from 'react';
+
 import * as H from '../../helpers';
 
 // onClickCell will be called with ({rowIndex, cellIndex, cellNumber, cellContent})
-const Crossword = ({binarygrid, values, size, onClickCell, print, hideNumbers}) => {
+const Crossword = ({ binarygrid, values, size, onClickCell, print, hideNumbers }) => {
     const numbergrid = H.clues.getNumberGrid(binarygrid);
 
     const renderCellContent = (cellBinary, rowIndex, cellIndex) => {
-        let onClick = () => onClickCell({rowIndex, cellIndex, cellNumber, cellContent, cellBinary});
+        let onClick = () => onClickCell({ rowIndex, cellIndex, cellNumber, cellContent, cellBinary });
 
-        let cellNumber = hideNumbers ? "" : numbergrid[rowIndex][cellIndex];
+        let cellNumber = hideNumbers ? '' : numbergrid[rowIndex][cellIndex];
         let cellContent = values ? values[rowIndex][cellIndex] : null;
 
         if (print) {
@@ -22,9 +23,9 @@ const Crossword = ({binarygrid, values, size, onClickCell, print, hideNumbers}) 
                         y={yvalue}
                         width="30"
                         height="30"
-                        style={{fill: fillColour, stroke: '#000', strokeWidth: 2}}
+                        style={{ fill: fillColour, stroke: '#000', strokeWidth: 2 }}
                     />
-                    <text style={{fontSize: 'smaller'}} x={xvalue + 2} y={yvalue + 12} className="cell-number">
+                    <text style={{ fontSize: 'smaller' }} x={xvalue + 2} y={yvalue + 12} className="cell-number">
                         {cellNumber || ''}
                     </text>
                 </g>
@@ -68,7 +69,7 @@ const Crossword = ({binarygrid, values, size, onClickCell, print, hideNumbers}) 
     });
     if (print) {
         return (
-            <div style={{width: '450px', height: '450px'}}>
+            <div style={{ width: '450px', height: '450px' }}>
                 <svg viewBox="0, 0, 450,450">{rows}</svg>
             </div>
         );

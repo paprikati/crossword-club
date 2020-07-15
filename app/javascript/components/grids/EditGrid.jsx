@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Navbar from "react-bootstrap/Navbar";
+import Navbar from 'react-bootstrap/Navbar';
+
+import * as H from '../../helpers';
 import Crossword from '../ui/Crossword';
 import SegmentedControl from '../ui/SegmentedControl';
 import withToast from '../wrappers/withToast';
-import * as H from "../../helpers";
 
 const EditGrid = ({ binarygrid, updateBinaryGrid, onBack, onSave, sendToast }) => {
     let [symmetricalMode, updateSymmetricalMode] = useState(true);
 
-    const onClickCell = ({rowIndex, cellIndex, cellBinary}) => {
+    const onClickCell = ({ rowIndex, cellIndex, cellBinary }) => {
         // if its the bottom half of the grid, message that they cant change that in symmetrical mode
         let halfway = Math.ceil(binarygrid.length / 2);
         if (symmetricalMode && rowIndex >= halfway) {
@@ -39,13 +40,13 @@ const EditGrid = ({ binarygrid, updateBinaryGrid, onBack, onSave, sendToast }) =
                 <small>Click a cell to change its colour</small>
             </div>
             <div className="preview">
-            <SegmentedControl
-                value={symmetricalMode}
-                label="Symmetrical Mode?"
-                width="300px"
-                onChange={updateSymmetricalMode}
-                options={[{label: 'On', value: true}, {label: 'Off', value: false}]}
-            />
+                <SegmentedControl
+                    value={symmetricalMode}
+                    label="Symmetrical Mode?"
+                    width="300px"
+                    onChange={updateSymmetricalMode}
+                    options={[{ label: 'On', value: true }, { label: 'Off', value: false }]}
+                />
                 <Crossword binarygrid={binarygrid} onClickCell={onClickCell} size="medium" />
             </div>
             <Navbar className="footer" fixed="bottom">

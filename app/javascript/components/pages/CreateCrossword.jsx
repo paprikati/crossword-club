@@ -11,4 +11,4 @@ const CreateCrossword = () => {
     );
 };
 
-export default Home;
+export default CreateCrossword;

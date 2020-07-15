@@ -1,2 +1,5 @@
 */node_modules/*
-packs/*
+node_modules/*
+public/packs/*
+app/javascript/packs/*
+old/*
