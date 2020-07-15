@@ -57,8 +57,51 @@ body {
     background-color: white;
     margin: auto;
     padding: 50px 25px 80px;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
 }
+
+// center toasts
+.toasts {
+position: absolute;
+top: 65px;
+left: 0;
+right: 0;
+}
+
+// style bootstrap toast
+.toast {
+margin: auto;
+
+.toast-header {
+    .message {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .close {
+    opacity: 1 !important;
+    }
+    }
+
+&.success {
+.toast-header {
+    color: $secondary-accent !important;
+        .close {
+        color: $secondary-accent !important;
+        }
+    }
+}
+
+&.error {
+.toast-header {
+    color: $primary-accent !important;
+        .close {
+        color: $primary-accent !important;
+        }
+    }
+}
+}
+
+
 
 // utils
 

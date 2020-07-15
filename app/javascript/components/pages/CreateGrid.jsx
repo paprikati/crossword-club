@@ -1,37 +1,35 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
 import * as H from '../../helpers';
-import ChooseBaseGrid from "../grids/ChooseBaseGrid";
-import EditGrid from "../grids/EditGrid";
+import { make_request } from '../../helpers';
+import ChooseBaseGrid from '../grids/ChooseBaseGrid';
+import EditGrid from '../grids/EditGrid';
+import withToast from '../wrappers/withToast';
 
-const CreateGrid = () => {
+const CreateGrid = ({ toast }) => {
     let [step, changeStep] = useState(1);
-    let [gridStyle, updateGridStyle] = useState('A');
-    let [gridWidth, updateGridWidth] = useState(15);
     let [binarygrid, updateBinaryGrid] = useState(H.grids.getBase(15, 'A'));
-    let [symmetricalMode, updateSymmetricalMode] = useState(true);
-
-    function changeBaseGrid(width, style) {
-        updateBinaryGrid(H.grids.getBase(width, style));
-    }
 
     function onSave() {
         let gridToStore = H.grids.convertBinaryToStored(binarygrid);
-        _fetch(
-            `/api/crossword/grids`,
+        make_request(
             {
+                url: '/grids',
                 method: 'POST',
-                body: JSON.stringify(gridToStore)
-            },
-            () => {
-                message.success('Saved!');
-                onChangePage('landing');
-            }
-        );
+                data: { grids: { layout: JSON.stringify(gridToStore) } }
+            }).then(() => {
+            //    TODO: do something more like a modal here with a mask and a 'if you dont get redirected click' button
+            toast.success('Grid Saved!');
+            setTimeout(() => {
+                console.log('about to redirect');
+                window.location.href = '/';
+            }, 1500);
+        }).catch(toast.error);
     }
 
-    const step1 = <ChooseBaseGrid binarygrid={binarygrid} updateBinaryGrid={updateBinaryGrid} onContinue={() => changeStep(2)} />
+    const step1 = <ChooseBaseGrid binarygrid={binarygrid} updateBinaryGrid={updateBinaryGrid} onContinue={() => changeStep(2)} />;
 
-    const step2 = <EditGrid binarygrid={binarygrid} updateBinaryGrid={updateBinaryGrid} onBack={() => changeStep(1)} onSave={onSave}/>
+    const step2 = <EditGrid binarygrid={binarygrid} updateBinaryGrid={updateBinaryGrid} onBack={() => changeStep(1)} onSave={onSave}/>;
 
     return (
         <div className="add-grid">
@@ -40,4 +38,4 @@ const CreateGrid = () => {
     );
 };
 
-export default CreateGrid;
+export default withToast(CreateGrid);

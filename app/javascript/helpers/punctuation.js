@@ -2,7 +2,7 @@ function arrToDisplay(arr) {
     let output = [];
     let partLength = 1;
 
-    arr.forEach((item, i) => {
+    arr.forEach(item => {
         if (item === '') {
             partLength++;
         } else {

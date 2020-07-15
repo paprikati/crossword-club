@@ -17,9 +17,13 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+    <% if request.path == '/' %>
+      <%= yield %>
+    <% else %>
     <div class="background"></div>
     <div class="page-content">
       <%= yield %>
     </div>
+  <% end %>
   </body>
 </html>

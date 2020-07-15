@@ -1,6 +1,10 @@
 {
   "name": "crossword_club",
   "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx --fix .",
+    "style": "npx stylelint \\\"client/**/*.less\\\" --fix"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.10.1",
     "@rails/actioncable": "^6.0.0",
@@ -8,8 +12,11 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "axios": "^0.19.2",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^4.5.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3",
     "formik": "^2.1.4",
     "input-range-scss": "^1.5.2",
     "prop-types": "^15.7.2",
@@ -25,6 +32,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
     "webpack-dev-server": "^3.11.0"
   }
 }

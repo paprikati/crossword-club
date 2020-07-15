@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { EyeFill, GridFill, PencilSquare, PlusSquareFill } from 'react-bootstrap-icons';
 import Button from 'react-bootstrap/Button';
-import { EyeFill, PlusSquareFill, PencilSquare, GridFill } from 'react-bootstrap-icons';
 
 const Home = ({ user }) => {
     user = user || {};
@@ -31,26 +31,30 @@ const Home = ({ user }) => {
             text: 'Create New Grid',
             hidden: !user,
             icon: <GridFill/>
-        },
+        }
     ];
 
-    return <div className="home">
-        <div className="background">
-            <div className="top-bar"/>
-            <div className="bottom-bar"/>
-        </div>
-        <div className="buttons">
-        {
+    return (
+        <div className="home">
+            <div className="home-background">
+                <div className="top-bar"/>
+                <div className="bottom-bar"/>
+            </div>
+            <div className="buttons">
+                {
             buttonConfig.map(btn => {
                 if (btn.hidden) return;
-                return <Button variant="outline-dark" className="home-btn" key={btn.key} href={btn.href}>
-                    <div className="icon">{btn.icon}</div>
-                    <div className="text">{btn.text}</div>
-                </Button>
+                return (
+                    <Button variant="outline-dark" className="home-btn" key={btn.key} href={btn.href}>
+                        <div className="icon">{btn.icon}</div>
+                        <div className="text">{btn.text}</div>
+                    </Button>
+);
             })
         }
+            </div>
         </div>
-    </div>
-}
+    );
+};
 
-export default Home
+export default Home;

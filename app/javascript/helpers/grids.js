@@ -50,8 +50,7 @@ function completeBinaryGrid(halfbinarygrid) {
 
 function convertBinaryToStored(binarygrid) {
     let ret = [];
-    let toSlice = Math.ceil(binarygrid.length / 2);
-    binarygrid.slice(0, toSlice).forEach(row => {
+    binarygrid.forEach(row => {
         let toPush = [];
         row.forEach((cell, cellIndex) => {
             if (!cell) {

@@ -33,4 +33,4 @@ function matches(word, values) {
     return true;
 }
 
-export default {getPossibleWords};
+export default { getPossibleWords };

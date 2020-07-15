@@ -1,14 +1,15 @@
 import axios from 'axios';
 import React from 'react';
+
 import punctuation from './punctuation';
-export {default as clues} from './clues';
-export {default as grids} from './grids';
-export {default as punctuation} from './punctuation';
-export {default as words} from './words';
+export { default as clues } from './clues';
+export { default as grids } from './grids';
+export { default as punctuation } from './punctuation';
+export { default as words } from './words';
 
 function get_csrf(){
 
-   return getMeta('csrf-token')
+    return getMeta('csrf-token');
 }
 
 function getMeta(metaName) {
@@ -24,10 +25,10 @@ function getMeta(metaName) {
 }
 
 export function make_request(config) {
-    return  axios(
+    return axios(
         {
             ...config,
-            headers: {...config.headers, 'X-CSRF-Token': get_csrf()}
+            headers: { ...config.headers, 'X-CSRF-Token': get_csrf() }
         }
     );
 }
@@ -112,7 +113,7 @@ export function getClueDisplay(clue) {
     let clueDisplayLength = punctuation.arrToDisplay(clue.punctuation);
     return (
         <div className="clue-display">
-        <b>{clue.number}</b> {clue.question} ({clueDisplayLength})
+            <b>{clue.number}</b> {clue.question} ({clueDisplayLength})
         </div>
-);
+    );
 }
