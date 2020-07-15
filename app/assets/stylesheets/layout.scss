@@ -1,14 +1,11 @@
-$primary-accent: #d03136;
-$secondary-accent: #588b8b;
-$dark: #1e2019;
-$light-grey: #d3d1d1;
-$xlight-grey: #f8f9fa;
+@import "./variables";
 
 // customise bootstrap
 $theme-colors: (
   "primary": $primary-accent,
   "secondary": $secondary-accent,
   "dark": $dark,
+  "danger": $danger
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
@@ -34,7 +31,7 @@ body {
 }
 
 .footer {
-  background-color: $dark;
+  background-color: $primary-accent;
   padding: 15px 25px;
   border-radius: 2px;
   box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -84,20 +81,20 @@ body {
 
   &.success {
     .toast-header {
-      color: $secondary-accent !important;
+      color: $primary-accent !important;
 
       .close {
-        color: $secondary-accent !important;
+        color: $primary-accent !important;
       }
     }
   }
 
   &.error {
     .toast-header {
-      color: $primary-accent !important;
+      color: $danger !important;
 
       .close {
-        color: $primary-accent !important;
+        color: $danger !important;
       }
     }
   }

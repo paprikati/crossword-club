@@ -6,6 +6,17 @@ function getBinaryGrid(halfgrid, numberOfCols) {
     return fillBinaryGrid(fullgrid, numberOfCols);
 }
 
+function getBinaryGridFull(gridLayout) {
+    return gridLayout.map(row => {
+        let ret = [];
+        for (let i = 0; i < gridLayout.length; i++) {
+            ret.push(row.includes(i) ? 0 : 1);
+        }
+        return ret;
+    });
+}
+
+
 function completeGrid(halfgrid, numberOfCols) {
     // this will be the second half of the grid
     let stack = [];
@@ -110,13 +121,14 @@ function getRandom(allGrids) {
         // min and max included
         return Math.floor(randTimesMultiplier + min);
     }
-    let thisGrid = allGrids[randomIntFromInterval(0, allGrids.length - 1)].grid;
+    let thisGrid = JSON.parse(allGrids[randomIntFromInterval(0, allGrids.length - 1)].layout);
 
-    return getBinaryGrid(thisGrid);
+    return getBinaryGridFull(thisGrid);
 }
 
 export default {
     getBinaryGrid,
+    getBinaryGridFull,
     completeBinaryGrid,
     convertBinaryToStored,
     getBase,

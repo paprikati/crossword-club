@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <%= react_component("ui/Header", { user: current_user }) %>
+  <%= react_component("ui/Header", { user: current_user, isHome: request.path == '/' }) %>
   <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>

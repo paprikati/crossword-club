@@ -7,14 +7,14 @@ import Crossword from '../ui/Crossword';
 import SegmentedControl from '../ui/SegmentedControl';
 import withToast from '../wrappers/withToast';
 
-const EditGrid = ({ binarygrid, updateBinaryGrid, onBack, onSave, sendToast }) => {
+const EditGrid = ({ binarygrid, updateBinaryGrid, onBack, onSave, toast }) => {
     let [symmetricalMode, updateSymmetricalMode] = useState(true);
 
     const onClickCell = ({ rowIndex, cellIndex, cellBinary }) => {
         // if its the bottom half of the grid, message that they cant change that in symmetrical mode
         let halfway = Math.ceil(binarygrid.length / 2);
         if (symmetricalMode && rowIndex >= halfway) {
-            sendToast('In symmetrical mode, you can only edit cells in the top half of the grid');
+            toast.error('In symmetrical mode, you can only edit cells in the top half of the grid');
             return;
         }
 
@@ -50,8 +50,8 @@ const EditGrid = ({ binarygrid, updateBinaryGrid, onBack, onSave, sendToast }) =
                 <Crossword binarygrid={binarygrid} onClickCell={onClickCell} size="medium" />
             </div>
             <Navbar className="footer" fixed="bottom">
-                <Button className="back " variant="primary" onClick={onBack}>Back</Button>
-                <Button className="save u-float-right" variant="primary" onClick={onSave}>Save</Button>
+                <Button className="back " variant="light" onClick={onBack}>Back</Button>
+                <Button className="save u-float-right" variant="light" onClick={onSave}>Save</Button>
             </Navbar>
         </div>
     );

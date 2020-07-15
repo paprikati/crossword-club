@@ -6,7 +6,7 @@ import Iframe from 'react-iframe';
 import { make_request } from '../../helpers';
 import Login from './Login';
 
-const Header = ({ user }) => {
+const Header = ({ user, isHome }) => {
 
     const [showSignInModal, updateShowSignInModal] = useState(false);
 
@@ -26,12 +26,13 @@ const Header = ({ user }) => {
     };
 
     // href="/users/sign_in"
-
+    const home = <Button variant="primary" href="/">Home</Button>;
     const logout = <Button variant="primary" onClick={onLogout}>Logout</Button>;
     const signIn = <Button variant="primary" onClick={() => updateShowSignInModal(true)}>Sign In</Button>;
 
     return (
         <div className="header">
+            {isHome ? null : home}
             <div className="text">Crossword Club</div>
             {user ? logout : signIn}
             <Login visible={showSignInModal} onHide={() => updateShowSignInModal(false)} />

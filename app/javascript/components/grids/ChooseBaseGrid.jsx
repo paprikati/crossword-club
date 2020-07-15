@@ -48,7 +48,7 @@ const ChooseBaseGrid = ({ binarygrid, updateBinaryGrid, onContinue }) => {
                 <Crossword binarygrid={binarygrid} size="small" hideNumbers />
             </div>
             <Navbar className="footer" fixed="bottom">
-                <Button className="continue u-float-right" variant="primary" onClick={onContinue}>Continue</Button>
+                <Button className="continue u-float-right" variant="light" onClick={onContinue}>Continue</Button>
             </Navbar>
         </div>
     );

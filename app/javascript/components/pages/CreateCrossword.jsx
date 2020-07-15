@@ -1,11 +1,15 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 
-const CreateCrossword = () => {
+import EditCrossword from '../crosswords/EditCrossword';
+
+const CreateCrossword = ( { user, grids, allCrosswords } ) => {
 
     return (
         <div className="create-crossword">
-            <h2>Choose Grid</h2>
+            <div className='page-heading'>
+                <h3>Create New Crossword</h3>
+            </div>
+            <EditCrossword user={user} grids={grids} allCrosswords={allCrosswords} mode="create" />
 
         </div>
     );

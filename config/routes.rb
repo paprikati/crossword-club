@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resource :grids
+  resource :crosswords
 
 end

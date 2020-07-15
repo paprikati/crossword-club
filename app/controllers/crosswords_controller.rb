@@ -1,0 +1,2 @@
+class CrosswordsController < ApplicationController
+end
