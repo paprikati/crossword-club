@@ -1,0 +1,2 @@
+class Crossword < ApplicationRecord
+end

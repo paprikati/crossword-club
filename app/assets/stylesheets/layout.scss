@@ -1,0 +1,80 @@
+$primary-accent: #D03136;
+$secondary-accent: #588B8B;
+$dark: #1E2019;
+$light-grey: #D3D1D1;
+$xlight-grey: #f8f9fa;
+
+// customise bootstrap
+$theme-colors: (
+    "primary": $primary-accent,
+    "secondary": $secondary-accent,
+    "dark": $dark,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+.header {
+    background-color: $primary-accent;
+    color: white;
+    font-weight: 700;
+    font-size: 26px;
+    padding: 10px;
+    display: flex;
+
+    .text {
+        flex-grow: 1;
+        text-align: center;
+        margin-left: 75px;
+    }
+}
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.footer {
+    background-color: $dark;
+    padding: 15px 25px;
+    border-radius: 2px;
+    box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    margin: auto;
+    max-width: 1094px;
+}
+
+.background {
+    background-color: $light-grey;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -5;
+}
+
+.page-content {
+    max-width: 1064px;
+    background-color: white;
+    margin: auto;
+    padding: 50px 25px 80px;
+    min-height: 100vh;
+}
+
+// utils
+
+.u-flex {
+display: flex;
+}
+
+.u-float-right {
+float: right
+}
+
+
+// customise the slider
+
+$thumb-color: $secondary-accent;
+$track-color: $xlight-grey;
+$thumb-height: 18px;
+$thumb-width: 18px;
+@import "../../../node_modules/input-range-scss/_inputrange.scss";

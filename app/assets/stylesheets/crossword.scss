@@ -1,0 +1,74 @@
+.crossword {
+    .crossword-row {
+        display: flex;
+    }
+
+    .crossword-cell {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        border: 0.5px black solid;
+
+        .black {
+            background-color: black;
+            height: 100%;
+            width: 100%;
+        }
+
+        .cell-number {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 12px;
+            padding: 0.75px;
+        }
+
+        .cell-content {
+            text-align: center;
+            font-size: 26px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            vertical-align: bottom;
+            padding-top: 5px;
+        }
+    }
+}
+
+.crossword.big {
+    .cell-content.has-number:hover {
+        cursor: pointer;
+    }
+}
+
+.crossword.small {
+    .crossword-cell {
+        height: 25px;
+        width: 25px;
+
+        .cell-number {
+            font-size: 7px;
+            padding: 0.75px;
+        }
+
+        .cell-content {
+            font-size: 12px;
+            padding-top: 3px;
+        }
+    }
+}
+
+.crossword.micro {
+    .crossword-cell {
+        height: 5px;
+        width: 5px;
+
+        .cell-number {
+            display: none;
+        }
+
+        .cell-content {
+            display: none;
+        }
+    }
+}

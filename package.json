@@ -1,0 +1,30 @@
+{
+  "name": "crossword_club",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.10.1",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "axios": "^0.19.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "bootstrap": "^4.5.0",
+    "formik": "^2.1.4",
+    "input-range-scss": "^1.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-bootstrap-icons": "^1.0.3-alpha4",
+    "react-dom": "^16.13.1",
+    "react-iframe": "^1.8.0",
+    "react_ujs": "^2.6.1",
+    "turbolinks": "^5.2.0",
+    "uuid": "^8.1.0",
+    "webpack": "^4.43.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}

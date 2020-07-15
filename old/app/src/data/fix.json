@@ -1,0 +1,620 @@
+{
+    "id": "2f3367dc-4daa-410f-ac56-bf8f8a765876",
+    "clues": [
+        {
+            "number": 1,
+            "length": 5,
+            "position": [
+                0,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Jewellery, zinc-free famous feral child carries one"
+        },
+        {
+            "number": 1,
+            "length": 7,
+            "position": [
+                0,
+                0
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Scene broadcast bill bottom"
+        },
+        {
+            "number": 2,
+            "length": 5,
+            "position": [
+                0,
+                2
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Detest components of water in broken bar"
+        },
+        {
+            "number": 3,
+            "length": 7,
+            "position": [
+                0,
+                4
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Awful trauma grips English hobbyist"
+        },
+        {
+            "number": 4,
+            "length": 9,
+            "position": [
+                0,
+                6
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Hermes bug back-to-front about German City"
+        },
+        {
+            "number": 4,
+            "length": 5,
+            "position": [
+                0,
+                6
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Reflective note"
+        },
+        {
+            "number": 5,
+            "length": 5,
+            "position": [
+                0,
+                8
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "He lives on set paper"
+        },
+        {
+            "number": 6,
+            "length": 7,
+            "position": [
+                0,
+                10
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Famous work by 22 is broken keel with sailor at sea"
+        },
+        {
+            "number": 7,
+            "length": 9,
+            "position": [
+                0,
+                12
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Soviet leader confuses grove with German maestro"
+        },
+        {
+            "number": 8,
+            "length": 7,
+            "position": [
+                0,
+                14
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "More unruly Oxford blue, perhaps, picks up upturned license"
+        },
+        {
+            "number": 9,
+            "length": 7,
+            "position": [
+                2,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Country forbid keeping hospital air unwell"
+        },
+        {
+            "number": 10,
+            "length": 7,
+            "position": [
+                2,
+                8
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Boy muddled with were expressive feature"
+        },
+        {
+            "number": 11,
+            "length": 5,
+            "position": [
+                4,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Three charges walk around Rhode Island; weird"
+        },
+        {
+            "number": 12,
+            "length": 5,
+            "position": [
+                4,
+                6
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Annual check-up and French polyphonic composition"
+        },
+        {
+            "number": 13,
+            "length": 3,
+            "position": [
+                4,
+                7
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                ""
+            ],
+            "question": "Reimagine Bambi's lost mother as a poem"
+        },
+        {
+            "number": 14,
+            "length": 3,
+            "position": [
+                4,
+                12
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                ""
+            ],
+            "question": "Local is hiding fictional prince"
+        },
+        {
+            "number": 15,
+            "length": 15,
+            "position": [
+                6,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "_",
+                "",
+                "",
+                "_",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "United Nations grime shade record on top of muddled earth is not feeling very well"
+        },
+        {
+            "number": 16,
+            "length": 9,
+            "position": [
+                6,
+                2
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "_",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Meaningful sprinkle in trouble"
+        },
+        {
+            "number": 17,
+            "length": 3,
+            "position": [
+                6,
+                5
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                ""
+            ],
+            "question": "Small car is a plaything"
+        },
+        {
+            "number": 18,
+            "length": 3,
+            "position": [
+                6,
+                9
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 19,
+            "length": 15,
+            "position": [
+                8,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "-",
+                "",
+                "",
+                "",
+                "_",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Utter news of envy around all the time"
+        },
+        {
+            "number": 19,
+            "length": 7,
+            "position": [
+                8,
+                0
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 20,
+            "length": 7,
+            "position": [
+                8,
+                4
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 21,
+            "length": 3,
+            "position": [
+                8,
+                7
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 22,
+            "length": 7,
+            "position": [
+                8,
+                10
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 23,
+            "length": 7,
+            "position": [
+                8,
+                14
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 24,
+            "length": 3,
+            "position": [
+                10,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                ""
+            ],
+            "question": "Confrontation line"
+        },
+        {
+            "number": 25,
+            "length": 5,
+            "position": [
+                10,
+                4
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Hotel supporting double duck inside dry fang"
+        },
+        {
+            "number": 26,
+            "length": 5,
+            "position": [
+                10,
+                6
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 27,
+            "length": 5,
+            "position": [
+                10,
+                8
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 28,
+            "length": 5,
+            "position": [
+                10,
+                10
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Medium holding up actual State "
+        },
+        {
+            "number": 29,
+            "length": 5,
+            "position": [
+                10,
+                12
+            ],
+            "isAcross": false,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "number": 30,
+            "length": 7,
+            "position": [
+                12,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Insect sensor is half a score within Tolstoy heroine"
+        },
+        {
+            "number": 31,
+            "length": 7,
+            "position": [
+                12,
+                8
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "French island bringing together"
+        },
+        {
+            "number": 32,
+            "length": 9,
+            "position": [
+                14,
+                0
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Standard shortened conqueror; headless city below a lake"
+        },
+        {
+            "number": 33,
+            "length": 5,
+            "position": [
+                14,
+                10
+            ],
+            "isAcross": true,
+            "punctuation": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "question": "Shoe fabric man inside woman"
+        }
+    ]
+}

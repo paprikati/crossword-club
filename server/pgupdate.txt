@@ -1,6 +1,0 @@
-create table crosswords (
-owner uuid not null,
-id uuid primary key not null,
-data json not null,
-ispublished boolean
-)
